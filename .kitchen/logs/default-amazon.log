@@ -1,0 +1,3 @@
+I, [2017-02-06T16:19:17.064124 #87700]  INFO -- default-amazon: -----> Destroying <default-amazon>...
+I, [2017-02-06T16:19:17.786912 #87700]  INFO -- default-amazon: EC2 instance <i-03d137af81d59917e> destroyed.
+I, [2017-02-06T16:19:17.787758 #87700]  INFO -- default-amazon: Finished destroying <default-amazon> (0m0.72s).

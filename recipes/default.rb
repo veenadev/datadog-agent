@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: stackdriver-agent
+# Cookbook Name:: rad-stackdriver-agent
 # Recipe:: default
 #
 # Copyright 2016, YOUR_COMPANY_NAME
@@ -8,21 +8,15 @@
 #
 
 execute 'Add repository' do
-  command 'curl -o /etc/apt/sources.list.d/stackdriver.list http://repo.stackdriver.com/trusty.list'
+  command 'curl -o /etc/yum.repos.d/stackdriver.repo https://repo.stackdriver.com/stackdriver-amzn.repo'
 end
 
-execute 'Add key' do
-  command 'curl --silent https://app.stackdriver.com/RPM-GPG-KEY-stackdriver |apt-key add -'
+execute 'installstackdriver agent' do
+  command "sudo yum install -y stackdriver-agent"
 end
-
-apt_update 'apt update' do
-  action :update
-end
-
-apt_package 'stackdriver-agent'
 
 execute 'Adding to Stackdriver App' do
-  command "/opt/stackdriver/stack-config --api-key #{node['stackdriver-agent']['api_key']}"
+  command "sudo /opt/stackdriver/stack-config --api-key #{node['stackdriver-agent']['api_key']}"
 end
 
 service 'Make sure Stackdriver-agent is started state' do

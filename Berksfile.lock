@@ -1,0 +1,7 @@
+DEPENDENCIES
+  rad_stackdriver_agent
+    path: .
+    metadata: true
+
+GRAPH
+  rad_stackdriver_agent (0.1.0)

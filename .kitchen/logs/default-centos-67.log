@@ -1,0 +1,141 @@
+I, [2017-02-05T21:03:42.691068 #56985]  INFO -- default-centos-67: -----> Converging <default-centos-67>...
+I, [2017-02-05T21:03:42.691635 #56985]  INFO -- default-centos-67: Preparing files for transfer
+I, [2017-02-05T21:03:42.691759 #56985]  INFO -- default-centos-67: Preparing dna.json
+I, [2017-02-05T21:03:42.692279 #56985]  INFO -- default-centos-67: Resolving cookbook dependencies with Berkshelf 5.1.0...
+I, [2017-02-05T21:03:42.851811 #56985]  INFO -- default-centos-67: Removing non-cookbook files before transfer
+I, [2017-02-05T21:03:42.857728 #56985]  INFO -- default-centos-67: Preparing solo.rb
+I, [2017-02-05T21:03:43.186257 #56985]  INFO -- default-centos-67: -----> Chef Omnibus installation detected (install only if missing)
+I, [2017-02-05T21:03:43.207604 #56985]  INFO -- default-centos-67: Transferring files to <default-centos-67>
+I, [2017-02-05T21:03:44.475981 #56985]  INFO -- default-centos-67: Starting Chef Client, version 12.18.31
+I, [2017-02-05T21:03:46.263126 #56985]  INFO -- default-centos-67: resolving cookbooks for run list: ["chef_stackdriver_agent::default"]
+I, [2017-02-05T21:03:46.286699 #56985]  INFO -- default-centos-67: Synchronizing Cookbooks:
+I, [2017-02-05T21:03:46.286751 #56985]  INFO -- default-centos-67:   - chef_stackdriver_agent (0.1.0)
+I, [2017-02-05T21:03:46.286769 #56985]  INFO -- default-centos-67: Installing Cookbook Gems:
+I, [2017-02-05T21:03:46.286783 #56985]  INFO -- default-centos-67: Compiling Cookbooks...
+I, [2017-02-05T21:03:46.286795 #56985]  INFO -- default-centos-67: Converging 4 resources
+I, [2017-02-05T21:03:46.286808 #56985]  INFO -- default-centos-67: Recipe: chef_stackdriver_agent::default
+I, [2017-02-05T21:03:47.193136 #56985]  INFO -- default-centos-67:   * execute[Add repository] action run
+I, [2017-02-05T21:03:47.196863 #56985]  INFO -- default-centos-67:     - execute  curl -o /etc/yum.repos.d/stackdriver.repo https://repo.stackdriver.com/stackdriver-amzn.repo
+I, [2017-02-05T21:03:47.831428 #56985]  INFO -- default-centos-67:   * execute[installstackdriver agent] action run
+I, [2017-02-05T21:03:47.831478 #56985]  INFO -- default-centos-67:     - execute sudo yum install -y stackdriver-agent
+I, [2017-02-05T21:03:53.943856 #56985]  INFO -- default-centos-67:   * execute[Adding to Stackdriver App] action run
+I, [2017-02-05T21:03:53.943911 #56985]  INFO -- default-centos-67:     
+I, [2017-02-05T21:03:53.943941 #56985]  INFO -- default-centos-67:     ================================================================================
+I, [2017-02-05T21:03:53.943962 #56985]  INFO -- default-centos-67:     Error executing action `run` on resource 'execute[Adding to Stackdriver App]'
+I, [2017-02-05T21:03:53.943979 #56985]  INFO -- default-centos-67:     ================================================================================
+I, [2017-02-05T21:03:53.943994 #56985]  INFO -- default-centos-67:     
+I, [2017-02-05T21:03:53.944012 #56985]  INFO -- default-centos-67:     Mixlib::ShellOut::ShellCommandFailed
+I, [2017-02-05T21:03:53.944026 #56985]  INFO -- default-centos-67:     ------------------------------------
+I, [2017-02-05T21:03:53.944041 #56985]  INFO -- default-centos-67:     Expected process to exit with [0], but received '1'
+I, [2017-02-05T21:03:53.944058 #56985]  INFO -- default-centos-67:     ---- Begin output of /opt/stackdriver/stack-config --api-key PRBB4JRJTJY1OE719CLLB27Z0ZOVC81I ----
+I, [2017-02-05T21:03:53.944073 #56985]  INFO -- default-centos-67:     STDOUT: Checking platform...
+I, [2017-02-05T21:03:53.944087 #56985]  INFO -- default-centos-67:     STDERR: Unable to auto-determine hostid.  Would you like to generate one? (Y/n)?
+I, [2017-02-05T21:03:53.944101 #56985]  INFO -- default-centos-67:     Traceback (most recent call last):
+I, [2017-02-05T21:03:53.944117 #56985]  INFO -- default-centos-67:       File "/opt/stackdriver/stack-config", line 306, in <module>
+I, [2017-02-05T21:03:53.944174 #56985]  INFO -- default-centos-67:  main()
+I, [2017-02-05T21:03:53.944191 #56985]  INFO -- default-centos-67:       File "/opt/stackdriver/stack-config", line 281, in main
+I, [2017-02-05T21:03:53.944227 #56985]  INFO -- default-centos-67:  inp = raw_input()
+I, [2017-02-05T21:03:53.944242 #56985]  INFO -- default-centos-67:     EOFError: EOF when reading a line
+I, [2017-02-05T21:03:53.944255 #56985]  INFO -- default-centos-67:     ---- End output of /opt/stackdriver/stack-config --api-key PRBB4JRJTJY1OE719CLLB27Z0ZOVC81I ----
+I, [2017-02-05T21:03:53.944268 #56985]  INFO -- default-centos-67:     Ran /opt/stackdriver/stack-config --api-key PRBB4JRJTJY1OE719CLLB27Z0ZOVC81I returned 1
+I, [2017-02-05T21:03:53.944281 #56985]  INFO -- default-centos-67:     
+I, [2017-02-05T21:03:53.944990 #56985]  INFO -- default-centos-67:     Resource Declaration:
+I, [2017-02-05T21:03:53.945037 #56985]  INFO -- default-centos-67:     ---------------------
+I, [2017-02-05T21:03:53.945057 #56985]  INFO -- default-centos-67:     # In /tmp/kitchen/cache/cookbooks/chef_stackdriver_agent/recipes/default.rb
+I, [2017-02-05T21:03:53.945074 #56985]  INFO -- default-centos-67:     
+I, [2017-02-05T21:03:53.945088 #56985]  INFO -- default-centos-67:      21: execute 'Adding to Stackdriver App' do
+I, [2017-02-05T21:03:53.945105 #56985]  INFO -- default-centos-67:      22:   command "/opt/stackdriver/stack-config --api-key #{node['stackdriver-agent']['api_key']}"
+I, [2017-02-05T21:03:53.945118 #56985]  INFO -- default-centos-67:      23: end
+I, [2017-02-05T21:03:53.945130 #56985]  INFO -- default-centos-67:      24: 
+I, [2017-02-05T21:03:53.945145 #56985]  INFO -- default-centos-67:     
+I, [2017-02-05T21:03:53.945158 #56985]  INFO -- default-centos-67:     Compiled Resource:
+I, [2017-02-05T21:03:53.945170 #56985]  INFO -- default-centos-67:     ------------------
+I, [2017-02-05T21:03:53.945182 #56985]  INFO -- default-centos-67:     # Declared in /tmp/kitchen/cache/cookbooks/chef_stackdriver_agent/recipes/default.rb:21:in `from_file'
+I, [2017-02-05T21:03:53.945196 #56985]  INFO -- default-centos-67:     
+I, [2017-02-05T21:03:53.945209 #56985]  INFO -- default-centos-67:     execute("Adding to Stackdriver App") do
+I, [2017-02-05T21:03:53.945221 #56985]  INFO -- default-centos-67:       action [:run]
+I, [2017-02-05T21:03:53.945261 #56985]  INFO -- default-centos-67:       retries 0
+I, [2017-02-05T21:03:53.945272 #56985]  INFO -- default-centos-67:       retry_delay 2
+I, [2017-02-05T21:03:53.945283 #56985]  INFO -- default-centos-67:       default_guard_interpreter :execute
+I, [2017-02-05T21:03:53.945297 #56985]  INFO -- default-centos-67:       command "/opt/stackdriver/stack-config --api-key PRBB4JRJTJY1OE719CLLB27Z0ZOVC81I"
+I, [2017-02-05T21:03:53.945309 #56985]  INFO -- default-centos-67:       backup 5
+I, [2017-02-05T21:03:53.945320 #56985]  INFO -- default-centos-67:       returns 0
+I, [2017-02-05T21:03:53.945332 #56985]  INFO -- default-centos-67:       declared_type :execute
+I, [2017-02-05T21:03:53.945342 #56985]  INFO -- default-centos-67:       cookbook_name "chef_stackdriver_agent"
+I, [2017-02-05T21:03:53.945353 #56985]  INFO -- default-centos-67:       recipe_name "default"
+I, [2017-02-05T21:03:53.945364 #56985]  INFO -- default-centos-67:     end
+I, [2017-02-05T21:03:53.945378 #56985]  INFO -- default-centos-67:     
+I, [2017-02-05T21:03:53.945389 #56985]  INFO -- default-centos-67:     Platform:
+I, [2017-02-05T21:03:53.945400 #56985]  INFO -- default-centos-67:     ---------
+I, [2017-02-05T21:03:53.945411 #56985]  INFO -- default-centos-67:     x86_64-linux
+I, [2017-02-05T21:03:53.945422 #56985]  INFO -- default-centos-67:     
+I, [2017-02-05T21:03:53.947127 #56985]  INFO -- default-centos-67: 
+I, [2017-02-05T21:03:53.947187 #56985]  INFO -- default-centos-67: Running handlers:
+I, [2017-02-05T21:03:53.947205 #56985]  INFO -- default-centos-67: [2017-02-06T02:03:52+00:00] ERROR: Running exception handlers
+I, [2017-02-05T21:03:53.947220 #56985]  INFO -- default-centos-67: Running handlers complete
+I, [2017-02-05T21:03:53.947234 #56985]  INFO -- default-centos-67: [2017-02-06T02:03:52+00:00] ERROR: Exception handlers complete
+I, [2017-02-05T21:03:53.947247 #56985]  INFO -- default-centos-67: Chef Client failed. 2 resources updated in 09 seconds
+I, [2017-02-05T21:03:53.948050 #56985]  INFO -- default-centos-67: [2017-02-06T02:03:52+00:00] FATAL: Stacktrace dumped to /tmp/kitchen/cache/chef-stacktrace.out
+I, [2017-02-05T21:03:53.948101 #56985]  INFO -- default-centos-67: [2017-02-06T02:03:52+00:00] FATAL: Please provide the contents of the stacktrace.out file if you file a bug report
+I, [2017-02-05T21:03:53.948120 #56985]  INFO -- default-centos-67: [2017-02-06T02:03:52+00:00] ERROR: execute[Adding to Stackdriver App] (chef_stackdriver_agent::default line 21) had an error: Mixlib::ShellOut::ShellCommandFailed: Expected process to exit with [0], but received '1'
+I, [2017-02-05T21:03:53.948135 #56985]  INFO -- default-centos-67: ---- Begin output of /opt/stackdriver/stack-config --api-key PRBB4JRJTJY1OE719CLLB27Z0ZOVC81I ----
+I, [2017-02-05T21:03:53.948149 #56985]  INFO -- default-centos-67: STDOUT: Checking platform...
+I, [2017-02-05T21:03:53.948177 #56985]  INFO -- default-centos-67: STDERR: Unable to auto-determine hostid.  Would you like to generate one? (Y/n)?
+I, [2017-02-05T21:03:53.948191 #56985]  INFO -- default-centos-67: Traceback (most recent call last):
+I, [2017-02-05T21:03:53.948203 #56985]  INFO -- default-centos-67:   File "/opt/stackdriver/stack-config", line 306, in <module>
+I, [2017-02-05T21:03:53.948216 #56985]  INFO -- default-centos-67:     main()
+I, [2017-02-05T21:03:53.948228 #56985]  INFO -- default-centos-67:   File "/opt/stackdriver/stack-config", line 281, in main
+I, [2017-02-05T21:03:53.948240 #56985]  INFO -- default-centos-67:     inp = raw_input()
+I, [2017-02-05T21:03:53.948252 #56985]  INFO -- default-centos-67: EOFError: EOF when reading a line
+I, [2017-02-05T21:03:53.948265 #56985]  INFO -- default-centos-67: ---- End output of /opt/stackdriver/stack-config --api-key PRBB4JRJTJY1OE719CLLB27Z0ZOVC81I ----
+I, [2017-02-05T21:03:53.948277 #56985]  INFO -- default-centos-67: Ran /opt/stackdriver/stack-config --api-key PRBB4JRJTJY1OE719CLLB27Z0ZOVC81I returned 1
+I, [2017-02-05T21:03:53.994745 #56985]  INFO -- default-centos-67: [2017-02-06T02:03:52+00:00] FATAL: Chef::Exceptions::ChildConvergeError: Chef run process exited unsuccessfully (exit code 1)
+E, [2017-02-05T21:03:54.042035 #56985] ERROR -- default-centos-67: Converge failed on instance <default-centos-67>.
+E, [2017-02-05T21:03:54.042232 #56985] ERROR -- default-centos-67: ------Exception-------
+E, [2017-02-05T21:03:54.042283 #56985] ERROR -- default-centos-67: Class: Kitchen::ActionFailed
+E, [2017-02-05T21:03:54.042316 #56985] ERROR -- default-centos-67: Message: SSH exited (1) for command: [sh -c '
+TEST_KITCHEN="1"; export TEST_KITCHEN
+sudo -E /opt/chef/bin/chef-solo --config /tmp/kitchen/solo.rb --log_level auto --no-color --json-attributes /tmp/kitchen/dna.json  --force-formatter
+']
+E, [2017-02-05T21:03:54.042342 #56985] ERROR -- default-centos-67: ----------------------
+E, [2017-02-05T21:03:54.042364 #56985] ERROR -- default-centos-67: ------Backtrace-------
+E, [2017-02-05T21:03:54.042383 #56985] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/provisioner/base.rb:86:in `rescue in call'
+E, [2017-02-05T21:03:54.042404 #56985] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/provisioner/base.rb:89:in `call'
+E, [2017-02-05T21:03:54.042421 #56985] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:380:in `block in converge_action'
+E, [2017-02-05T21:03:54.042446 #56985] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:520:in `synchronize_or_call'
+E, [2017-02-05T21:03:54.042467 #56985] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:485:in `block in action'
+E, [2017-02-05T21:03:54.042486 #56985] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/2.3.0/benchmark.rb:293:in `measure'
+E, [2017-02-05T21:03:54.042505 #56985] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:484:in `action'
+E, [2017-02-05T21:03:54.042544 #56985] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:376:in `converge_action'
+E, [2017-02-05T21:03:54.042566 #56985] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:355:in `block in transition_to'
+E, [2017-02-05T21:03:54.042585 #56985] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:354:in `each'
+E, [2017-02-05T21:03:54.042604 #56985] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:354:in `transition_to'
+E, [2017-02-05T21:03:54.042622 #56985] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:138:in `converge'
+E, [2017-02-05T21:03:54.042640 #56985] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/command.rb:201:in `public_send'
+E, [2017-02-05T21:03:54.042659 #56985] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/command.rb:201:in `run_action_in_thread'
+E, [2017-02-05T21:03:54.042684 #56985] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/command.rb:173:in `block (2 levels) in run_action'
+E, [2017-02-05T21:03:54.042703 #56985] ERROR -- default-centos-67: ----End Backtrace-----
+E, [2017-02-05T21:03:54.042719 #56985] ERROR -- default-centos-67: ---Nested Exception---
+E, [2017-02-05T21:03:54.042776 #56985] ERROR -- default-centos-67: Class: Kitchen::Transport::SshFailed
+E, [2017-02-05T21:03:54.042834 #56985] ERROR -- default-centos-67: Message: SSH exited (1) for command: [sh -c '
+TEST_KITCHEN="1"; export TEST_KITCHEN
+sudo -E /opt/chef/bin/chef-solo --config /tmp/kitchen/solo.rb --log_level auto --no-color --json-attributes /tmp/kitchen/dna.json  --force-formatter
+']
+E, [2017-02-05T21:03:54.043971 #56985] ERROR -- default-centos-67: ----------------------
+E, [2017-02-05T21:03:54.044101 #56985] ERROR -- default-centos-67: ------Backtrace-------
+E, [2017-02-05T21:03:54.044139 #56985] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/provisioner/base.rb:86:in `rescue in call'
+E, [2017-02-05T21:03:54.044167 #56985] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/provisioner/base.rb:89:in `call'
+E, [2017-02-05T21:03:54.044193 #56985] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:380:in `block in converge_action'
+E, [2017-02-05T21:03:54.044213 #56985] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:520:in `synchronize_or_call'
+E, [2017-02-05T21:03:54.044232 #56985] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:485:in `block in action'
+E, [2017-02-05T21:03:54.044251 #56985] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/2.3.0/benchmark.rb:293:in `measure'
+E, [2017-02-05T21:03:54.044270 #56985] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:484:in `action'
+E, [2017-02-05T21:03:54.044301 #56985] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:376:in `converge_action'
+E, [2017-02-05T21:03:54.044318 #56985] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:355:in `block in transition_to'
+E, [2017-02-05T21:03:54.044335 #56985] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:354:in `each'
+E, [2017-02-05T21:03:54.044374 #56985] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:354:in `transition_to'
+E, [2017-02-05T21:03:54.044392 #56985] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:138:in `converge'
+E, [2017-02-05T21:03:54.044407 #56985] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/command.rb:201:in `public_send'
+E, [2017-02-05T21:03:54.044422 #56985] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/command.rb:201:in `run_action_in_thread'
+E, [2017-02-05T21:03:54.044438 #56985] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/command.rb:173:in `block (2 levels) in run_action'
+E, [2017-02-05T21:03:54.044455 #56985] ERROR -- default-centos-67: ----End Backtrace-----

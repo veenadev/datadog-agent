@@ -1,0 +1,26 @@
+---
+driver:
+  name: ec2
+  aws_ssh_key_id: aha-kp
+  region: us-east-1
+  availability_zone: b
+  subnet_id: subnet-92ab02db 
+  instance_type: t2.micro
+  image_id: ami-0b33d91d
+  security_group_ids: ['sg-e3130399']
+  retryable_tries: 120
+provisioner:
+  name: chef_solo
+
+transport:
+  username: ec2-user  
+  ssh_key: /Users/REANEmployee/Desktop/aha-kp.pem
+
+platforms:
+   - name: amazon 
+
+suites:
+  - name: default
+    run_list:
+      - recipe[rad_stackdriver_agent::default]
+    attributes:

@@ -1,0 +1,104 @@
+I, [2017-02-05T21:37:44.398467 #59197]  INFO -- default-centos: -----> Creating <default-centos>...
+I, [2017-02-05T21:37:45.906701 #59197]  INFO -- default-centos: Bringing machine 'default' up with 'virtualbox' provider...
+I, [2017-02-05T21:37:46.035855 #59197]  INFO -- default-centos: ==> default: Box 'centos' could not be found. Attempting to find and install...
+I, [2017-02-05T21:37:46.036132 #59197]  INFO -- default-centos:     default: Box Provider: virtualbox
+I, [2017-02-05T21:37:46.036393 #59197]  INFO -- default-centos:     default: Box Version: >= 0
+I, [2017-02-05T21:37:46.252921 #59197]  INFO -- default-centos: ==> default: Box file was not detected as metadata. Adding it directly...
+I, [2017-02-05T21:37:46.253052 #59197]  INFO -- default-centos: ==> default: Adding box 'centos' (v0) for provider: virtualbox
+I, [2017-02-05T21:37:46.256645 #59197]  INFO -- default-centos:     default: Downloading: centos
+I, [2017-02-05T21:37:46.275522 #59197]  INFO -- default-centos: [KAn error occurred while downloading the remote file. The error
+I, [2017-02-05T21:37:46.275582 #59197]  INFO -- default-centos: message, if any, is reproduced below. Please fix this error and try
+I, [2017-02-05T21:37:46.275600 #59197]  INFO -- default-centos: again.
+I, [2017-02-05T21:37:46.275622 #59197]  INFO -- default-centos: 
+I, [2017-02-05T21:37:46.275635 #59197]  INFO -- default-centos: Couldn't open file /Users/REANEmployee/chef-stackdriver-agent/.kitchen/kitchen-vagrant/kitchen-chef-stackdriver-agent-default-centos/centos
+E, [2017-02-05T21:37:46.333923 #59197] ERROR -- default-centos: Create failed on instance <default-centos>.
+E, [2017-02-05T21:37:46.334161 #59197] ERROR -- default-centos: ------Exception-------
+E, [2017-02-05T21:37:46.334205 #59197] ERROR -- default-centos: Class: Kitchen::ShellOut::ShellCommandFailed
+E, [2017-02-05T21:37:46.334230 #59197] ERROR -- default-centos: Message: Expected process to exit with [0], but received '1'
+---- Begin output of vagrant up --no-provision --provider virtualbox ----
+STDOUT: Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Box 'centos' could not be found. Attempting to find and install...
+    default: Box Provider: virtualbox
+    default: Box Version: >= 0
+==> default: Box file was not detected as metadata. Adding it directly...
+==> default: Adding box 'centos' (v0) for provider: virtualbox
+    default: Downloading: centos
+[K
+STDERR: An error occurred while downloading the remote file. The error
+message, if any, is reproduced below. Please fix this error and try
+again.
+
+Couldn't open file /Users/REANEmployee/chef-stackdriver-agent/.kitchen/kitchen-vagrant/kitchen-chef-stackdriver-agent-default-centos/centos
+---- End output of vagrant up --no-provision --provider virtualbox ----
+Ran vagrant up --no-provision --provider virtualbox returned 1
+E, [2017-02-05T21:37:46.334453 #59197] ERROR -- default-centos: ----------------------
+E, [2017-02-05T21:37:46.334474 #59197] ERROR -- default-centos: ------Backtrace-------
+E, [2017-02-05T21:37:46.334514 #59197] ERROR -- default-centos: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/shell_out.rb:73:in `rescue in run_command'
+E, [2017-02-05T21:37:46.334537 #59197] ERROR -- default-centos: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/shell_out.rb:61:in `run_command'
+E, [2017-02-05T21:37:46.334562 #59197] ERROR -- default-centos: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/kitchen-vagrant-0.20.0/lib/kitchen/driver/vagrant.rb:343:in `run_command'
+E, [2017-02-05T21:37:46.334583 #59197] ERROR -- default-centos: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/kitchen-vagrant-0.20.0/lib/kitchen/driver/vagrant.rb:302:in `run'
+E, [2017-02-05T21:37:46.334603 #59197] ERROR -- default-centos: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/kitchen-vagrant-0.20.0/lib/kitchen/driver/vagrant.rb:373:in `run_vagrant_up'
+E, [2017-02-05T21:37:46.334622 #59197] ERROR -- default-centos: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/kitchen-vagrant-0.20.0/lib/kitchen/driver/vagrant.rb:96:in `create'
+E, [2017-02-05T21:37:46.334665 #59197] ERROR -- default-centos: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:456:in `public_send'
+E, [2017-02-05T21:37:46.334690 #59197] ERROR -- default-centos: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:456:in `block in perform_action'
+E, [2017-02-05T21:37:46.334711 #59197] ERROR -- default-centos: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:517:in `block in synchronize_or_call'
+E, [2017-02-05T21:37:46.334729 #59197] ERROR -- default-centos: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:515:in `synchronize'
+E, [2017-02-05T21:37:46.334750 #59197] ERROR -- default-centos: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:515:in `synchronize_or_call'
+E, [2017-02-05T21:37:46.334779 #59197] ERROR -- default-centos: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:485:in `block in action'
+E, [2017-02-05T21:37:46.334799 #59197] ERROR -- default-centos: /opt/chefdk/embedded/lib/ruby/2.3.0/benchmark.rb:293:in `measure'
+E, [2017-02-05T21:37:46.334819 #59197] ERROR -- default-centos: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:484:in `action'
+E, [2017-02-05T21:37:46.334842 #59197] ERROR -- default-centos: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:456:in `perform_action'
+E, [2017-02-05T21:37:46.334862 #59197] ERROR -- default-centos: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:366:in `create_action'
+E, [2017-02-05T21:37:46.334882 #59197] ERROR -- default-centos: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:355:in `block in transition_to'
+E, [2017-02-05T21:37:46.334901 #59197] ERROR -- default-centos: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:354:in `each'
+E, [2017-02-05T21:37:46.334920 #59197] ERROR -- default-centos: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:354:in `transition_to'
+E, [2017-02-05T21:37:46.334940 #59197] ERROR -- default-centos: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:127:in `create'
+E, [2017-02-05T21:37:46.334962 #59197] ERROR -- default-centos: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/command.rb:201:in `public_send'
+E, [2017-02-05T21:37:46.334982 #59197] ERROR -- default-centos: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/command.rb:201:in `run_action_in_thread'
+E, [2017-02-05T21:37:46.335007 #59197] ERROR -- default-centos: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/command.rb:173:in `block (2 levels) in run_action'
+E, [2017-02-05T21:37:46.335028 #59197] ERROR -- default-centos: ----End Backtrace-----
+E, [2017-02-05T21:37:46.335047 #59197] ERROR -- default-centos: ---Nested Exception---
+E, [2017-02-05T21:37:46.335070 #59197] ERROR -- default-centos: Class: Mixlib::ShellOut::ShellCommandFailed
+E, [2017-02-05T21:37:46.335089 #59197] ERROR -- default-centos: Message: Expected process to exit with [0], but received '1'
+---- Begin output of vagrant up --no-provision --provider virtualbox ----
+STDOUT: Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Box 'centos' could not be found. Attempting to find and install...
+    default: Box Provider: virtualbox
+    default: Box Version: >= 0
+==> default: Box file was not detected as metadata. Adding it directly...
+==> default: Adding box 'centos' (v0) for provider: virtualbox
+    default: Downloading: centos
+[K
+STDERR: An error occurred while downloading the remote file. The error
+message, if any, is reproduced below. Please fix this error and try
+again.
+
+Couldn't open file /Users/REANEmployee/chef-stackdriver-agent/.kitchen/kitchen-vagrant/kitchen-chef-stackdriver-agent-default-centos/centos
+---- End output of vagrant up --no-provision --provider virtualbox ----
+Ran vagrant up --no-provision --provider virtualbox returned 1
+E, [2017-02-05T21:37:46.335117 #59197] ERROR -- default-centos: ----------------------
+E, [2017-02-05T21:37:46.335138 #59197] ERROR -- default-centos: ------Backtrace-------
+E, [2017-02-05T21:37:46.335213 #59197] ERROR -- default-centos: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/shell_out.rb:73:in `rescue in run_command'
+E, [2017-02-05T21:37:46.335237 #59197] ERROR -- default-centos: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/shell_out.rb:61:in `run_command'
+E, [2017-02-05T21:37:46.335262 #59197] ERROR -- default-centos: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/kitchen-vagrant-0.20.0/lib/kitchen/driver/vagrant.rb:343:in `run_command'
+E, [2017-02-05T21:37:46.335282 #59197] ERROR -- default-centos: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/kitchen-vagrant-0.20.0/lib/kitchen/driver/vagrant.rb:302:in `run'
+E, [2017-02-05T21:37:46.335304 #59197] ERROR -- default-centos: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/kitchen-vagrant-0.20.0/lib/kitchen/driver/vagrant.rb:373:in `run_vagrant_up'
+E, [2017-02-05T21:37:46.335326 #59197] ERROR -- default-centos: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/kitchen-vagrant-0.20.0/lib/kitchen/driver/vagrant.rb:96:in `create'
+E, [2017-02-05T21:37:46.335351 #59197] ERROR -- default-centos: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:456:in `public_send'
+E, [2017-02-05T21:37:46.335371 #59197] ERROR -- default-centos: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:456:in `block in perform_action'
+E, [2017-02-05T21:37:46.335391 #59197] ERROR -- default-centos: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:517:in `block in synchronize_or_call'
+E, [2017-02-05T21:37:46.335411 #59197] ERROR -- default-centos: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:515:in `synchronize'
+E, [2017-02-05T21:37:46.335434 #59197] ERROR -- default-centos: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:515:in `synchronize_or_call'
+E, [2017-02-05T21:37:46.335455 #59197] ERROR -- default-centos: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:485:in `block in action'
+E, [2017-02-05T21:37:46.335475 #59197] ERROR -- default-centos: /opt/chefdk/embedded/lib/ruby/2.3.0/benchmark.rb:293:in `measure'
+E, [2017-02-05T21:37:46.335495 #59197] ERROR -- default-centos: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:484:in `action'
+E, [2017-02-05T21:37:46.335515 #59197] ERROR -- default-centos: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:456:in `perform_action'
+E, [2017-02-05T21:37:46.335534 #59197] ERROR -- default-centos: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:366:in `create_action'
+E, [2017-02-05T21:37:46.335556 #59197] ERROR -- default-centos: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:355:in `block in transition_to'
+E, [2017-02-05T21:37:46.335574 #59197] ERROR -- default-centos: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:354:in `each'
+E, [2017-02-05T21:37:46.335597 #59197] ERROR -- default-centos: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:354:in `transition_to'
+E, [2017-02-05T21:37:46.335617 #59197] ERROR -- default-centos: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:127:in `create'
+E, [2017-02-05T21:37:46.335637 #59197] ERROR -- default-centos: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/command.rb:201:in `public_send'
+E, [2017-02-05T21:37:46.335657 #59197] ERROR -- default-centos: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/command.rb:201:in `run_action_in_thread'
+E, [2017-02-05T21:37:46.335685 #59197] ERROR -- default-centos: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/command.rb:173:in `block (2 levels) in run_action'
+E, [2017-02-05T21:37:46.335707 #59197] ERROR -- default-centos: ----End Backtrace-----

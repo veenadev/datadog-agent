@@ -1,38 +1,16 @@
-stackdriver-agent Cookbook
+rad-stackdriver-agent Cookbook
 ======================
-TODO: Enter the cookbook description here.
-
-e.g.
-This cookbook makes your favorite breakfast sandwich.
+This cookbook will install Stackdriver agent in the Amazon-Linux machine.
 
 Requirements
 ------------
-TODO: List your cookbook requirements. Be sure to include any requirements this cookbook has on platforms, libraries, other cookbooks, packages, operating systems, etc.
-
-e.g.
-#### packages
-- `toaster` - stackdriver-agent needs toaster to brown your bagel.
+Amazon Linux machine
 
 Attributes
 ----------
-TODO: List your cookbook attributes here.
+Provide the Stackdriver API key here:
+default['stackdriver-agent']['api_key'] = ''
 
-e.g.
-#### stackdriver-agent::default
-<table>
-  <tr>
-    <th>Key</th>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Default</th>
-  </tr>
-  <tr>
-    <td><tt>['stackdriver-agent']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
-  </tr>
-</table>
 
 Usage
 -----
@@ -65,4 +43,4 @@ e.g.
 
 License and Authors
 -------------------
-Authors: TODO: List authors
+Authors: veena.dev@reancloud.com

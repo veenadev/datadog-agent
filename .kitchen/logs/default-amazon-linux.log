@@ -1,0 +1,104 @@
+I, [2017-02-05T21:36:59.326442 #59137]  INFO -- default-amazon-linux: -----> Creating <default-amazon-linux>...
+I, [2017-02-05T21:37:00.954142 #59137]  INFO -- default-amazon-linux: Bringing machine 'default' up with 'virtualbox' provider...
+I, [2017-02-05T21:37:01.093522 #59137]  INFO -- default-amazon-linux: ==> default: Box 'amazon-linux' could not be found. Attempting to find and install...
+I, [2017-02-05T21:37:01.093727 #59137]  INFO -- default-amazon-linux:     default: Box Provider: virtualbox
+I, [2017-02-05T21:37:01.094312 #59137]  INFO -- default-amazon-linux:     default: Box Version: >= 0
+I, [2017-02-05T21:37:01.336529 #59137]  INFO -- default-amazon-linux: ==> default: Box file was not detected as metadata. Adding it directly...
+I, [2017-02-05T21:37:01.336770 #59137]  INFO -- default-amazon-linux: ==> default: Adding box 'amazon-linux' (v0) for provider: virtualbox
+I, [2017-02-05T21:37:01.340650 #59137]  INFO -- default-amazon-linux:     default: Downloading: amazon-linux
+I, [2017-02-05T21:37:01.392953 #59137]  INFO -- default-amazon-linux: [KAn error occurred while downloading the remote file. The error
+I, [2017-02-05T21:37:01.393006 #59137]  INFO -- default-amazon-linux: message, if any, is reproduced below. Please fix this error and try
+I, [2017-02-05T21:37:01.393030 #59137]  INFO -- default-amazon-linux: again.
+I, [2017-02-05T21:37:01.393047 #59137]  INFO -- default-amazon-linux: 
+I, [2017-02-05T21:37:01.393063 #59137]  INFO -- default-amazon-linux: Couldn't open file /Users/REANEmployee/chef-stackdriver-agent/.kitchen/kitchen-vagrant/kitchen-chef-stackdriver-agent-default-amazon-linux/amazon-linux
+E, [2017-02-05T21:37:01.455735 #59137] ERROR -- default-amazon-linux: Create failed on instance <default-amazon-linux>.
+E, [2017-02-05T21:37:01.456161 #59137] ERROR -- default-amazon-linux: ------Exception-------
+E, [2017-02-05T21:37:01.456182 #59137] ERROR -- default-amazon-linux: Class: Kitchen::ShellOut::ShellCommandFailed
+E, [2017-02-05T21:37:01.456197 #59137] ERROR -- default-amazon-linux: Message: Expected process to exit with [0], but received '1'
+---- Begin output of vagrant up --no-provision --provider virtualbox ----
+STDOUT: Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Box 'amazon-linux' could not be found. Attempting to find and install...
+    default: Box Provider: virtualbox
+    default: Box Version: >= 0
+==> default: Box file was not detected as metadata. Adding it directly...
+==> default: Adding box 'amazon-linux' (v0) for provider: virtualbox
+    default: Downloading: amazon-linux
+[K
+STDERR: An error occurred while downloading the remote file. The error
+message, if any, is reproduced below. Please fix this error and try
+again.
+
+Couldn't open file /Users/REANEmployee/chef-stackdriver-agent/.kitchen/kitchen-vagrant/kitchen-chef-stackdriver-agent-default-amazon-linux/amazon-linux
+---- End output of vagrant up --no-provision --provider virtualbox ----
+Ran vagrant up --no-provision --provider virtualbox returned 1
+E, [2017-02-05T21:37:01.456211 #59137] ERROR -- default-amazon-linux: ----------------------
+E, [2017-02-05T21:37:01.456222 #59137] ERROR -- default-amazon-linux: ------Backtrace-------
+E, [2017-02-05T21:37:01.456232 #59137] ERROR -- default-amazon-linux: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/shell_out.rb:73:in `rescue in run_command'
+E, [2017-02-05T21:37:01.456246 #59137] ERROR -- default-amazon-linux: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/shell_out.rb:61:in `run_command'
+E, [2017-02-05T21:37:01.456257 #59137] ERROR -- default-amazon-linux: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/kitchen-vagrant-0.20.0/lib/kitchen/driver/vagrant.rb:343:in `run_command'
+E, [2017-02-05T21:37:01.456268 #59137] ERROR -- default-amazon-linux: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/kitchen-vagrant-0.20.0/lib/kitchen/driver/vagrant.rb:302:in `run'
+E, [2017-02-05T21:37:01.456281 #59137] ERROR -- default-amazon-linux: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/kitchen-vagrant-0.20.0/lib/kitchen/driver/vagrant.rb:373:in `run_vagrant_up'
+E, [2017-02-05T21:37:01.456303 #59137] ERROR -- default-amazon-linux: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/kitchen-vagrant-0.20.0/lib/kitchen/driver/vagrant.rb:96:in `create'
+E, [2017-02-05T21:37:01.456317 #59137] ERROR -- default-amazon-linux: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:456:in `public_send'
+E, [2017-02-05T21:37:01.456328 #59137] ERROR -- default-amazon-linux: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:456:in `block in perform_action'
+E, [2017-02-05T21:37:01.456340 #59137] ERROR -- default-amazon-linux: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:517:in `block in synchronize_or_call'
+E, [2017-02-05T21:37:01.456355 #59137] ERROR -- default-amazon-linux: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:515:in `synchronize'
+E, [2017-02-05T21:37:01.456368 #59137] ERROR -- default-amazon-linux: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:515:in `synchronize_or_call'
+E, [2017-02-05T21:37:01.456383 #59137] ERROR -- default-amazon-linux: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:485:in `block in action'
+E, [2017-02-05T21:37:01.456395 #59137] ERROR -- default-amazon-linux: /opt/chefdk/embedded/lib/ruby/2.3.0/benchmark.rb:293:in `measure'
+E, [2017-02-05T21:37:01.456406 #59137] ERROR -- default-amazon-linux: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:484:in `action'
+E, [2017-02-05T21:37:01.456417 #59137] ERROR -- default-amazon-linux: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:456:in `perform_action'
+E, [2017-02-05T21:37:01.456429 #59137] ERROR -- default-amazon-linux: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:366:in `create_action'
+E, [2017-02-05T21:37:01.456442 #59137] ERROR -- default-amazon-linux: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:355:in `block in transition_to'
+E, [2017-02-05T21:37:01.456452 #59137] ERROR -- default-amazon-linux: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:354:in `each'
+E, [2017-02-05T21:37:01.456466 #59137] ERROR -- default-amazon-linux: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:354:in `transition_to'
+E, [2017-02-05T21:37:01.456477 #59137] ERROR -- default-amazon-linux: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:127:in `create'
+E, [2017-02-05T21:37:01.456489 #59137] ERROR -- default-amazon-linux: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/command.rb:201:in `public_send'
+E, [2017-02-05T21:37:01.456502 #59137] ERROR -- default-amazon-linux: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/command.rb:201:in `run_action_in_thread'
+E, [2017-02-05T21:37:01.456515 #59137] ERROR -- default-amazon-linux: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/command.rb:173:in `block (2 levels) in run_action'
+E, [2017-02-05T21:37:01.456528 #59137] ERROR -- default-amazon-linux: ----End Backtrace-----
+E, [2017-02-05T21:37:01.456542 #59137] ERROR -- default-amazon-linux: ---Nested Exception---
+E, [2017-02-05T21:37:01.456555 #59137] ERROR -- default-amazon-linux: Class: Mixlib::ShellOut::ShellCommandFailed
+E, [2017-02-05T21:37:01.456567 #59137] ERROR -- default-amazon-linux: Message: Expected process to exit with [0], but received '1'
+---- Begin output of vagrant up --no-provision --provider virtualbox ----
+STDOUT: Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Box 'amazon-linux' could not be found. Attempting to find and install...
+    default: Box Provider: virtualbox
+    default: Box Version: >= 0
+==> default: Box file was not detected as metadata. Adding it directly...
+==> default: Adding box 'amazon-linux' (v0) for provider: virtualbox
+    default: Downloading: amazon-linux
+[K
+STDERR: An error occurred while downloading the remote file. The error
+message, if any, is reproduced below. Please fix this error and try
+again.
+
+Couldn't open file /Users/REANEmployee/chef-stackdriver-agent/.kitchen/kitchen-vagrant/kitchen-chef-stackdriver-agent-default-amazon-linux/amazon-linux
+---- End output of vagrant up --no-provision --provider virtualbox ----
+Ran vagrant up --no-provision --provider virtualbox returned 1
+E, [2017-02-05T21:37:01.456581 #59137] ERROR -- default-amazon-linux: ----------------------
+E, [2017-02-05T21:37:01.456595 #59137] ERROR -- default-amazon-linux: ------Backtrace-------
+E, [2017-02-05T21:37:01.456609 #59137] ERROR -- default-amazon-linux: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/shell_out.rb:73:in `rescue in run_command'
+E, [2017-02-05T21:37:01.456627 #59137] ERROR -- default-amazon-linux: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/shell_out.rb:61:in `run_command'
+E, [2017-02-05T21:37:01.456649 #59137] ERROR -- default-amazon-linux: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/kitchen-vagrant-0.20.0/lib/kitchen/driver/vagrant.rb:343:in `run_command'
+E, [2017-02-05T21:37:01.456659 #59137] ERROR -- default-amazon-linux: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/kitchen-vagrant-0.20.0/lib/kitchen/driver/vagrant.rb:302:in `run'
+E, [2017-02-05T21:37:01.456672 #59137] ERROR -- default-amazon-linux: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/kitchen-vagrant-0.20.0/lib/kitchen/driver/vagrant.rb:373:in `run_vagrant_up'
+E, [2017-02-05T21:37:01.456686 #59137] ERROR -- default-amazon-linux: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/kitchen-vagrant-0.20.0/lib/kitchen/driver/vagrant.rb:96:in `create'
+E, [2017-02-05T21:37:01.456696 #59137] ERROR -- default-amazon-linux: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:456:in `public_send'
+E, [2017-02-05T21:37:01.456708 #59137] ERROR -- default-amazon-linux: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:456:in `block in perform_action'
+E, [2017-02-05T21:37:01.456719 #59137] ERROR -- default-amazon-linux: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:517:in `block in synchronize_or_call'
+E, [2017-02-05T21:37:01.456732 #59137] ERROR -- default-amazon-linux: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:515:in `synchronize'
+E, [2017-02-05T21:37:01.456743 #59137] ERROR -- default-amazon-linux: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:515:in `synchronize_or_call'
+E, [2017-02-05T21:37:01.456755 #59137] ERROR -- default-amazon-linux: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:485:in `block in action'
+E, [2017-02-05T21:37:01.456768 #59137] ERROR -- default-amazon-linux: /opt/chefdk/embedded/lib/ruby/2.3.0/benchmark.rb:293:in `measure'
+E, [2017-02-05T21:37:01.456779 #59137] ERROR -- default-amazon-linux: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:484:in `action'
+E, [2017-02-05T21:37:01.456792 #59137] ERROR -- default-amazon-linux: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:456:in `perform_action'
+E, [2017-02-05T21:37:01.456804 #59137] ERROR -- default-amazon-linux: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:366:in `create_action'
+E, [2017-02-05T21:37:01.456815 #59137] ERROR -- default-amazon-linux: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:355:in `block in transition_to'
+E, [2017-02-05T21:37:01.456829 #59137] ERROR -- default-amazon-linux: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:354:in `each'
+E, [2017-02-05T21:37:01.456841 #59137] ERROR -- default-amazon-linux: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:354:in `transition_to'
+E, [2017-02-05T21:37:01.456857 #59137] ERROR -- default-amazon-linux: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:127:in `create'
+E, [2017-02-05T21:37:01.456872 #59137] ERROR -- default-amazon-linux: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/command.rb:201:in `public_send'
+E, [2017-02-05T21:37:01.456883 #59137] ERROR -- default-amazon-linux: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/command.rb:201:in `run_action_in_thread'
+E, [2017-02-05T21:37:01.456895 #59137] ERROR -- default-amazon-linux: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/command.rb:173:in `block (2 levels) in run_action'
+E, [2017-02-05T21:37:01.456906 #59137] ERROR -- default-amazon-linux: ----End Backtrace-----

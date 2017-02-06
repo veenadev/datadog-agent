@@ -1,0 +1,104 @@
+I, [2017-02-05T21:30:16.192652 #58763]  INFO -- default-ec2-user: -----> Creating <default-ec2-user>...
+I, [2017-02-05T21:30:17.697561 #58763]  INFO -- default-ec2-user: Bringing machine 'default' up with 'virtualbox' provider...
+I, [2017-02-05T21:30:17.824014 #58763]  INFO -- default-ec2-user: ==> default: Box 'ec2-user' could not be found. Attempting to find and install...
+I, [2017-02-05T21:30:17.824171 #58763]  INFO -- default-ec2-user:     default: Box Provider: virtualbox
+I, [2017-02-05T21:30:17.824445 #58763]  INFO -- default-ec2-user:     default: Box Version: >= 0
+I, [2017-02-05T21:30:18.041256 #58763]  INFO -- default-ec2-user: ==> default: Box file was not detected as metadata. Adding it directly...
+I, [2017-02-05T21:30:18.041461 #58763]  INFO -- default-ec2-user: ==> default: Adding box 'ec2-user' (v0) for provider: virtualbox
+I, [2017-02-05T21:30:18.045395 #58763]  INFO -- default-ec2-user:     default: Downloading: ec2-user
+I, [2017-02-05T21:30:18.064183 #58763]  INFO -- default-ec2-user: [KAn error occurred while downloading the remote file. The error
+I, [2017-02-05T21:30:18.064240 #58763]  INFO -- default-ec2-user: message, if any, is reproduced below. Please fix this error and try
+I, [2017-02-05T21:30:18.064263 #58763]  INFO -- default-ec2-user: again.
+I, [2017-02-05T21:30:18.064284 #58763]  INFO -- default-ec2-user: 
+I, [2017-02-05T21:30:18.064301 #58763]  INFO -- default-ec2-user: Couldn't open file /Users/REANEmployee/chef-stackdriver-agent/.kitchen/kitchen-vagrant/kitchen-chef-stackdriver-agent-default-ec2-user/ec2-user
+E, [2017-02-05T21:30:18.123892 #58763] ERROR -- default-ec2-user: Create failed on instance <default-ec2-user>.
+E, [2017-02-05T21:30:18.124020 #58763] ERROR -- default-ec2-user: ------Exception-------
+E, [2017-02-05T21:30:18.124044 #58763] ERROR -- default-ec2-user: Class: Kitchen::ShellOut::ShellCommandFailed
+E, [2017-02-05T21:30:18.124060 #58763] ERROR -- default-ec2-user: Message: Expected process to exit with [0], but received '1'
+---- Begin output of vagrant up --no-provision --provider virtualbox ----
+STDOUT: Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Box 'ec2-user' could not be found. Attempting to find and install...
+    default: Box Provider: virtualbox
+    default: Box Version: >= 0
+==> default: Box file was not detected as metadata. Adding it directly...
+==> default: Adding box 'ec2-user' (v0) for provider: virtualbox
+    default: Downloading: ec2-user
+[K
+STDERR: An error occurred while downloading the remote file. The error
+message, if any, is reproduced below. Please fix this error and try
+again.
+
+Couldn't open file /Users/REANEmployee/chef-stackdriver-agent/.kitchen/kitchen-vagrant/kitchen-chef-stackdriver-agent-default-ec2-user/ec2-user
+---- End output of vagrant up --no-provision --provider virtualbox ----
+Ran vagrant up --no-provision --provider virtualbox returned 1
+E, [2017-02-05T21:30:18.124077 #58763] ERROR -- default-ec2-user: ----------------------
+E, [2017-02-05T21:30:18.124088 #58763] ERROR -- default-ec2-user: ------Backtrace-------
+E, [2017-02-05T21:30:18.124103 #58763] ERROR -- default-ec2-user: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/shell_out.rb:73:in `rescue in run_command'
+E, [2017-02-05T21:30:18.124118 #58763] ERROR -- default-ec2-user: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/shell_out.rb:61:in `run_command'
+E, [2017-02-05T21:30:18.124133 #58763] ERROR -- default-ec2-user: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/kitchen-vagrant-0.20.0/lib/kitchen/driver/vagrant.rb:343:in `run_command'
+E, [2017-02-05T21:30:18.124148 #58763] ERROR -- default-ec2-user: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/kitchen-vagrant-0.20.0/lib/kitchen/driver/vagrant.rb:302:in `run'
+E, [2017-02-05T21:30:18.124161 #58763] ERROR -- default-ec2-user: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/kitchen-vagrant-0.20.0/lib/kitchen/driver/vagrant.rb:373:in `run_vagrant_up'
+E, [2017-02-05T21:30:18.124175 #58763] ERROR -- default-ec2-user: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/kitchen-vagrant-0.20.0/lib/kitchen/driver/vagrant.rb:96:in `create'
+E, [2017-02-05T21:30:18.124198 #58763] ERROR -- default-ec2-user: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:456:in `public_send'
+E, [2017-02-05T21:30:18.124576 #58763] ERROR -- default-ec2-user: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:456:in `block in perform_action'
+E, [2017-02-05T21:30:18.124590 #58763] ERROR -- default-ec2-user: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:517:in `block in synchronize_or_call'
+E, [2017-02-05T21:30:18.124603 #58763] ERROR -- default-ec2-user: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:515:in `synchronize'
+E, [2017-02-05T21:30:18.124614 #58763] ERROR -- default-ec2-user: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:515:in `synchronize_or_call'
+E, [2017-02-05T21:30:18.124626 #58763] ERROR -- default-ec2-user: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:485:in `block in action'
+E, [2017-02-05T21:30:18.124640 #58763] ERROR -- default-ec2-user: /opt/chefdk/embedded/lib/ruby/2.3.0/benchmark.rb:293:in `measure'
+E, [2017-02-05T21:30:18.124652 #58763] ERROR -- default-ec2-user: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:484:in `action'
+E, [2017-02-05T21:30:18.124664 #58763] ERROR -- default-ec2-user: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:456:in `perform_action'
+E, [2017-02-05T21:30:18.124677 #58763] ERROR -- default-ec2-user: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:366:in `create_action'
+E, [2017-02-05T21:30:18.124690 #58763] ERROR -- default-ec2-user: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:355:in `block in transition_to'
+E, [2017-02-05T21:30:18.124702 #58763] ERROR -- default-ec2-user: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:354:in `each'
+E, [2017-02-05T21:30:18.124714 #58763] ERROR -- default-ec2-user: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:354:in `transition_to'
+E, [2017-02-05T21:30:18.124726 #58763] ERROR -- default-ec2-user: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:127:in `create'
+E, [2017-02-05T21:30:18.124738 #58763] ERROR -- default-ec2-user: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/command.rb:201:in `public_send'
+E, [2017-02-05T21:30:18.124751 #58763] ERROR -- default-ec2-user: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/command.rb:201:in `run_action_in_thread'
+E, [2017-02-05T21:30:18.124765 #58763] ERROR -- default-ec2-user: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/command.rb:173:in `block (2 levels) in run_action'
+E, [2017-02-05T21:30:18.124775 #58763] ERROR -- default-ec2-user: ----End Backtrace-----
+E, [2017-02-05T21:30:18.124786 #58763] ERROR -- default-ec2-user: ---Nested Exception---
+E, [2017-02-05T21:30:18.124797 #58763] ERROR -- default-ec2-user: Class: Mixlib::ShellOut::ShellCommandFailed
+E, [2017-02-05T21:30:18.124809 #58763] ERROR -- default-ec2-user: Message: Expected process to exit with [0], but received '1'
+---- Begin output of vagrant up --no-provision --provider virtualbox ----
+STDOUT: Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Box 'ec2-user' could not be found. Attempting to find and install...
+    default: Box Provider: virtualbox
+    default: Box Version: >= 0
+==> default: Box file was not detected as metadata. Adding it directly...
+==> default: Adding box 'ec2-user' (v0) for provider: virtualbox
+    default: Downloading: ec2-user
+[K
+STDERR: An error occurred while downloading the remote file. The error
+message, if any, is reproduced below. Please fix this error and try
+again.
+
+Couldn't open file /Users/REANEmployee/chef-stackdriver-agent/.kitchen/kitchen-vagrant/kitchen-chef-stackdriver-agent-default-ec2-user/ec2-user
+---- End output of vagrant up --no-provision --provider virtualbox ----
+Ran vagrant up --no-provision --provider virtualbox returned 1
+E, [2017-02-05T21:30:18.124827 #58763] ERROR -- default-ec2-user: ----------------------
+E, [2017-02-05T21:30:18.124839 #58763] ERROR -- default-ec2-user: ------Backtrace-------
+E, [2017-02-05T21:30:18.124850 #58763] ERROR -- default-ec2-user: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/shell_out.rb:73:in `rescue in run_command'
+E, [2017-02-05T21:30:18.124864 #58763] ERROR -- default-ec2-user: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/shell_out.rb:61:in `run_command'
+E, [2017-02-05T21:30:18.124876 #58763] ERROR -- default-ec2-user: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/kitchen-vagrant-0.20.0/lib/kitchen/driver/vagrant.rb:343:in `run_command'
+E, [2017-02-05T21:30:18.124886 #58763] ERROR -- default-ec2-user: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/kitchen-vagrant-0.20.0/lib/kitchen/driver/vagrant.rb:302:in `run'
+E, [2017-02-05T21:30:18.124898 #58763] ERROR -- default-ec2-user: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/kitchen-vagrant-0.20.0/lib/kitchen/driver/vagrant.rb:373:in `run_vagrant_up'
+E, [2017-02-05T21:30:18.124910 #58763] ERROR -- default-ec2-user: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/kitchen-vagrant-0.20.0/lib/kitchen/driver/vagrant.rb:96:in `create'
+E, [2017-02-05T21:30:18.124924 #58763] ERROR -- default-ec2-user: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:456:in `public_send'
+E, [2017-02-05T21:30:18.124937 #58763] ERROR -- default-ec2-user: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:456:in `block in perform_action'
+E, [2017-02-05T21:30:18.124949 #58763] ERROR -- default-ec2-user: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:517:in `block in synchronize_or_call'
+E, [2017-02-05T21:30:18.124961 #58763] ERROR -- default-ec2-user: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:515:in `synchronize'
+E, [2017-02-05T21:30:18.124972 #58763] ERROR -- default-ec2-user: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:515:in `synchronize_or_call'
+E, [2017-02-05T21:30:18.124984 #58763] ERROR -- default-ec2-user: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:485:in `block in action'
+E, [2017-02-05T21:30:18.124996 #58763] ERROR -- default-ec2-user: /opt/chefdk/embedded/lib/ruby/2.3.0/benchmark.rb:293:in `measure'
+E, [2017-02-05T21:30:18.125008 #58763] ERROR -- default-ec2-user: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:484:in `action'
+E, [2017-02-05T21:30:18.125018 #58763] ERROR -- default-ec2-user: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:456:in `perform_action'
+E, [2017-02-05T21:30:18.125031 #58763] ERROR -- default-ec2-user: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:366:in `create_action'
+E, [2017-02-05T21:30:18.125042 #58763] ERROR -- default-ec2-user: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:355:in `block in transition_to'
+E, [2017-02-05T21:30:18.125052 #58763] ERROR -- default-ec2-user: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:354:in `each'
+E, [2017-02-05T21:30:18.125064 #58763] ERROR -- default-ec2-user: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:354:in `transition_to'
+E, [2017-02-05T21:30:18.125075 #58763] ERROR -- default-ec2-user: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/instance.rb:127:in `create'
+E, [2017-02-05T21:30:18.125087 #58763] ERROR -- default-ec2-user: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/command.rb:201:in `public_send'
+E, [2017-02-05T21:30:18.125105 #58763] ERROR -- default-ec2-user: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/command.rb:201:in `run_action_in_thread'
+E, [2017-02-05T21:30:18.125118 #58763] ERROR -- default-ec2-user: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.13.2/lib/kitchen/command.rb:173:in `block (2 levels) in run_action'
+E, [2017-02-05T21:30:18.125130 #58763] ERROR -- default-ec2-user: ----End Backtrace-----
