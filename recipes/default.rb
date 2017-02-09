@@ -12,11 +12,11 @@ execute 'Add repository' do
 end
 
 execute 'installstackdriver agent' do
-  command "sudo yum install -y stackdriver-agent"
+  command "yum install -y stackdriver-agent"
 end
 
 execute 'Adding to Stackdriver App' do
-  command "sudo /opt/stackdriver/stack-config --api-key #{node['stackdriver-agent']['api_key']}"
+  command "/opt/stackdriver/stack-config --api-key #{node['stackdriver-agent']['api_key']}"
 end
 
 service 'Make sure Stackdriver-agent is started state' do
