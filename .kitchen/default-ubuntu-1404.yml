@@ -1,6 +1,0 @@
----
-hostname: 127.0.0.1
-port: '2202'
-username: vagrant
-ssh_key: "/Users/REANEmployee/chef-stackdriver-agent/.kitchen/kitchen-vagrant/kitchen-chef-stackdriver-agent-default-ubuntu-1404/.vagrant/machines/default/virtualbox/private_key"
-last_action: create
