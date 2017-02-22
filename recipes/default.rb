@@ -7,12 +7,16 @@
 # All rights reserved - Do Not Redistribute
 #
 
-execute 'Add repository' do
-  command 'curl -o /etc/yum.repos.d/stackdriver.repo https://repo.stackdriver.com/stackdriver-amzn.repo'
+remote_file '/etc/yum.repos.d/stackdriver.repo' do
+  source 'https://repo.stackdriver.com/stackdriver-amzn.repo'
+  owner 'root'
+  group 'root'
+  mode '0755'
+  action :create
 end
 
 execute 'installstackdriver agent' do
-  command "yum install -y stackdriver-agent"
+  command 'yum install -y stackdriver-agent'
 end
 
 execute 'Adding to Stackdriver App' do
@@ -28,4 +32,3 @@ service 'Make sure stackdriver-extractor is started state' do
   service_name 'stackdriver-extractor'
   action :start
 end
-
