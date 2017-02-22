@@ -1,4 +1,4 @@
-name             'rad_stackdriver_agent'
+name             'stackdriver-agent-rean'
 maintainer       'REAN CLOUD'
 maintainer_email 'veena.dev@reancloud.com'
 license          'All rights reserved'

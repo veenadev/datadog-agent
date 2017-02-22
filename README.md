@@ -1,4 +1,4 @@
-rad-stackdriver-agent Cookbook
+stackdriver-agent-rean Cookbook
 ======================
 This cookbook will install Stackdriver agent in the Amazon-Linux machine.
 

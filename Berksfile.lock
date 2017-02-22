@@ -1,7 +1,7 @@
 DEPENDENCIES
-  rad_stackdriver_agent
+  stackdriver-agent-rean
     path: .
     metadata: true
 
 GRAPH
-  rad_stackdriver_agent (0.1.0)
+  stackdriver-agent-rean (0.1.0)
