@@ -1,9 +1,9 @@
-name             'stackdriver-agent-rean'
+name             'datadog-agent'
 maintainer       'REAN CLOUD'
 maintainer_email 'veena.dev@reancloud.com'
 license          'All rights reserved'
-description      'Installs/Configures stackdriver-agent'
-long_description 'Installs/Configures stackdriver-agent in Amazon Linux machine'
+description      'Installs/Configures datadog-agent'
+long_description 'Installs/Configures datadog-agent in Amazon Linux machine'
 version          '0.1.0'
 
 

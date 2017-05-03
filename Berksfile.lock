@@ -1,7 +1,7 @@
 DEPENDENCIES
-  stackdriver-agent-rean
+  datadog-agent
     path: .
     metadata: true
 
 GRAPH
-  stackdriver-agent-rean (0.1.0)
+  datadog-agent (0.1.0)
