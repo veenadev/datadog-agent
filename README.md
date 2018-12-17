@@ -1,4 +1,4 @@
-stackdriver-agent-rean Cookbook
+datadog-agent Cookbook
 ======================
 This cookbook will install Stackdriver agent in the Amazon-Linux machine.
 
