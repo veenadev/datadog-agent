@@ -1,6 +1,6 @@
 datadog-agent Cookbook
 ======================
-This cookbook will install Stackdriver agent in the Amazon-Linux machine.
+This cookbook will install datadog agent in the Amazon-Linux machine.
 
 Requirements
 ------------
@@ -9,7 +9,7 @@ Amazon Linux machine
 Attributes
 ----------
 Provide the Stackdriver API key here:
-default['stackdriver-agent']['api_key'] = ''
+default['datadog-agent']['api_key'] = ''
 
 
 Usage
@@ -18,13 +18,13 @@ Usage
 TODO: Write usage instructions for each cookbook.
 
 e.g.
-Just include `stackdriver-agent` in your node's `run_list`:
+Just include `datadog-agent` in your node's `run_list`:
 
 ```json
 {
   "name":"my_node",
   "run_list": [
-    "recipe[stackdriver-agent]"
+    "recipe[datadog-agent]"
   ]
 }
 ```
