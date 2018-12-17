@@ -1,10 +1,10 @@
 ---
 driver:
   name: ec2
-  aws_ssh_key_id: aha-kp
+  aws_ssh_key_id: xyz
   security_group_ids: ["sg-e3130399"]
   region: us-east-1
-  subnet_id: subnet-92ab02db
+  subnet_id: subnet-xyz
   availability_zone: b
   require_chef_omnibus: true
   instance_type: t1.micro
@@ -17,7 +17,7 @@ platforms:
     driver:
       image_id: ami-0b33d91d
     transport:
-      ssh_key: /Users/REANEmployee/Desktop/aha-kp.pem
+      ssh_key: /Users/xyz/Desktop/xyz-kp.pem
       username: ec2-user
 
 suites:
